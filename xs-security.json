@@ -18,7 +18,7 @@
     ],
     "attributes": [
         {
-            "name": "UnitTipeID",
+            "name": "UnitTipe",
             "description": "Land UnitTipe",
             "valueType": "string"
           }
@@ -46,7 +46,7 @@
         ],
         "attribute-references": [
             {
-            "name" : "UnitTipeID"
+            "name" : "UnitTipe"
             }
         ]
     },
