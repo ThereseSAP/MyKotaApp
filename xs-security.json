@@ -1,0 +1,66 @@
+{
+    "xsappname": "kotakota",
+    "tenant-mode": "dedicated",
+    "description": "kotatest",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.viewsea",
+            "description": "Viewer Sea"
+        },
+        {
+            "name": "$XSAPPNAME.viewland",
+            "description": "Viewer Land"
+        },
+        {
+            "name": "$XSAPPNAME.admin",
+            "description": "Admin myKota"
+        }
+    ],
+    "attributes": [
+        {
+            "name": "UnitTipeID",
+            "description": "Land UnitTipe",
+            "valueType": "string"
+          }
+    ],
+    "role-templates": [
+      {
+        "name": "Token_Exchange",
+        "description": "UAA",
+        "scope-references": [
+          "uaa.user"
+        ]
+      },
+      {
+        "name": "Viewer_Sea",
+        "description": "Viewer Sea",
+        "scope-references": [
+            "$XSAPPNAME.viewsea"
+        ]
+    },
+    {
+        "name": "Viewer_Land",
+        "description": "Viewer Land",
+        "scope-references": [
+            "$XSAPPNAME.viewland"
+        ],
+        "attribute-references": [
+            {
+            "name" : "UnitTipeID"
+            }
+        ]
+    },
+    {
+        "name": "Admin",
+        "description": "Admin myKota",
+        "scope-references": [
+            "$XSAPPNAME.admin"
+        ]
+    }
+    ],
+      "oauth2-configuration": {
+          "redirect-uris": [
+              "https://app.kotakota.id"
+          ]
+      }
+  }

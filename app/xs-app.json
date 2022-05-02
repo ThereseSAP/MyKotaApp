@@ -1,0 +1,34 @@
+{
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/user-api(.*)/$",
+            "target": "$1",
+            "service": "sap-approuter-userapi"
+        },
+        {
+            "source": "^/catalog/UnitAvailSea(.*)",
+            "destination": "dest_mainsrv",
+            "authenticationType": "basic",
+            "csrfProtection": false
+        },
+        {
+            "source": "^/catalog/UnitAvailLand(.*)",
+            "destination": "dest_mainsrv",
+            "authenticationType": "basic",
+            "csrfProtection": false
+        },
+        {
+            "source": "^/mainsrv/(.*)$",
+            "target": "$1",
+            "destination": "dest_mainsrv",
+            "authenticationType": "basic",
+            "csrfProtection": false
+        },
+        {
+            "source": "^(.*)",
+            "localDir": "webapp",
+            "authenticationType": "xsuaa"
+        }
+  ]
+}
