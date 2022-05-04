@@ -4,7 +4,7 @@ sap.ui.define([
 ], function(Controller, UIComponent) {
 	"use strict";
     /*var mainUrl = "https://apiapps.cfapps.ap11.hana.ondemand.com/catalog/";*/
-    var mainUrl = "/catalog/";
+    var mainUrl = "/mainsrv/catalog/";
 
 	return Controller.extend("sap.ui.kotakota.controller.BaseController", {
 

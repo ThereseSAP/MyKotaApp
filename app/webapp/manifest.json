@@ -28,11 +28,11 @@
 				"type": "JSON"
 			},
             "UnitAvailSea": {
-				"uri": "/catalog/UnitAvailSea",
+				"uri": "/mainsrv/catalog/UnitAvailSea",
 				"type": "JSON"
 			},
             "UnitAvailLand": {
-				"uri": "/catalog/UnitAvailLand",
+				"uri": "/mainsrv/catalog/UnitAvailLand",
 				"type": "JSON"
 			}
         }
