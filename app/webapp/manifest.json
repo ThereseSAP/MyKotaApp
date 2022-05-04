@@ -467,6 +467,10 @@
                 "KontrakViewDetail": {
                     "viewId":"KontrakViewDetail",
                     "viewName":"kontrakview.Detail"
+                },
+                "Others":{
+                    "viewId":"Others",
+                    "viewName":"Others"
                 }
             }
         },

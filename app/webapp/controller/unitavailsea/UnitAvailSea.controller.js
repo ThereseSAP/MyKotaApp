@@ -26,9 +26,23 @@ sap.ui.define([
 
             _onPatternMatched: async function (oEvent) {
                 // var UnitAvailSea = this.getOwnerComponent().getModel("UnitAvailSea");
-                var UnitAvailSea = await this.AjaxGetData("UnitAvailSea");
-                var oUnitAvailSea = new JSONModel(UnitAvailSea);
-                this.getView().setModel(oUnitAvailSea, "UnitAvailSea");
+                try{
+                    var UnitAvailSea = await this.AjaxGetData("UnitAvailSea");
+                    var oUnitAvailSea = new JSONModel(UnitAvailSea);
+                    this.getView().setModel(oUnitAvailSea, "UnitAvailSea");
+                }
+                catch(err){
+                    var that = this;
+                    //console.error('Error: ', err);
+                    MessageBox.error(err.status + " " + err.statusText, {
+                        onClose: function (sAction) {
+                            that.getRouter().getTargets().display("Others");
+                        }
+                    });
+                    //this.getRouter().getTargets().display("Others");
+                    //MessageToast.show(err.status + " " + err.statusText);
+                    //MessageBox.information(err.status + " " + err.statusText);
+                }
             },
 
             filterGlobally: function (oEvent) {
