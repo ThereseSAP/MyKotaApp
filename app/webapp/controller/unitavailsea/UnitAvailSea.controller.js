@@ -39,9 +39,6 @@ sap.ui.define([
                             that.getRouter().getTargets().display("Others");
                         }
                     });
-                    //this.getRouter().getTargets().display("Others");
-                    //MessageToast.show(err.status + " " + err.statusText);
-                    //MessageBox.information(err.status + " " + err.statusText);
                 }
             },
 

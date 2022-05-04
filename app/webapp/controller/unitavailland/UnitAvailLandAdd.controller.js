@@ -110,7 +110,7 @@ sap.ui.define([
                     "KgBatal": parseInt(KgBatal)
                 };
                 try {
-                    await this.AjaxPostData("UnitAvailSea", post);
+                    await this.AjaxPostData("UnitAvailLand", post);
                     MessageToast.show("Create success");
                     window.history.go(-1);
 
