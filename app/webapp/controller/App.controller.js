@@ -94,6 +94,9 @@ sap.ui.define([
                     oToggleButton.setTooltip(sTooltipText);
                 });
             },
-    
+
+            onLogout: function () {
+                sap.m.URLHelper.redirect("/logout", false);
+            }
         });
     });

@@ -23,3 +23,11 @@ New view "Others" for basic UI handling
 
 Deployment Prerequisites (XSUAA must be the same as MyKotaSrv)
 1. Create XSUAA instance using xs-security.json found in MyKotaApp in BTP
+
+Additional: Logout Button
+1. Updated "Right side Button" into "Logout" Button
+
+Authorization Behavior:
+1. If user is Unauthorized to READ/GET data:
+    - Poput message of error
+    - Message Page screen to block screen

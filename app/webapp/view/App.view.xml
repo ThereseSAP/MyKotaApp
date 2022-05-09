@@ -12,7 +12,7 @@
                     <Button text="Kotakota.id" icon="sap-icon://menu2"
 		                press=".onSideNavButtonPress"></Button>
                     <ToolbarSpacer></ToolbarSpacer>
-                    <Button text="right side button"></Button>
+                    <Button text="Log Out" press="onLogout"></Button>
                 </tnt:content>
             </tnt:ToolHeader>
         </tnt:header>

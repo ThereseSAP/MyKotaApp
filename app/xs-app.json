@@ -1,5 +1,8 @@
 {
     "authenticationMethod": "route",
+    "logout": { 
+        "logoutEndpoint": "/logout"
+      }, 
     "routes": [
         {
             "source": "^/user-api(.*)/$",
@@ -16,7 +19,8 @@
         {
             "source": "^(.*)",
             "localDir": "webapp",
-            "authenticationType": "xsuaa"
+            "authenticationType": "xsuaa",
+            "cacheControl": "no-cache, no-store, must-revalidate"
         }
   ]
 }
