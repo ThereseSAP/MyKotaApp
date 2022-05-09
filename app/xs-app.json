@@ -5,11 +5,6 @@
       }, 
     "routes": [
         {
-            "source": "^/user-api(.*)/$",
-            "target": "$1",
-            "service": "sap-approuter-userapi"
-        },
-        {
             "source": "^/mainsrv/(.*)$",
             "target": "$1",
             "destination": "dest_mainsrv",
